@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Encryption Sample</string>
+    <string-array name="encryption_types">
+        <item>AES</item>
+        <item>AES256 JNEncryption</item>
+        <item>KeyChain</item>
+        <item>MD5</item>
+    </string-array>
+</resources>
