@@ -3,7 +3,7 @@
     <string-array name="encryption_types">
         <item>AES</item>
         <item>AES256 JNEncryption</item>
-        <item>KeyChain</item>
+        <item>KeyStore</item>
         <item>MD5</item>
     </string-array>
 </resources>

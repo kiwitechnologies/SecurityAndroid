@@ -14,8 +14,8 @@ public class DataSecurityFactory {
             return new AES();
         } else if (type == DataSecurity.TYPE.AES256) {
             return new AES256JNEncryption();
-        } else if (type == DataSecurity.TYPE.KEY_CHAIN) {
-            return new KeyChain();
+        } else if (type == DataSecurity.TYPE.KEY_STORE) {
+            return new KeyStoreSecurity();
         } else if (type == DataSecurity.TYPE.MD5){
             return new MD5();
         }

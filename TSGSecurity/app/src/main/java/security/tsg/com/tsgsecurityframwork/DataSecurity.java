@@ -11,7 +11,7 @@ public interface DataSecurity {
     enum TYPE {
         AES,
         AES256,
-        KEY_CHAIN,
+        KEY_STORE,
         MD5
     }
 

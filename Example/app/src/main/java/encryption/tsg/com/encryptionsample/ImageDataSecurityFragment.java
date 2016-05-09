@@ -111,9 +111,6 @@ public class ImageDataSecurityFragment extends Fragment implements View.OnClickL
                 break;
             case 2:
                 Toast.makeText(mContext, "Not possible only support for 128 bytes data.", Toast.LENGTH_LONG).show();
-//                KeyChain keyChain = (KeyChain) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.KEY_CHAIN);
-//                encryptedData = keyChain.encrypt(mContext, HomeActivity.KEY_CHAIN_KEY, bitmap);
-//                mTvOutput.setText(encryptedData);
                 return;
             case 3:
                 MD5 md5 = (MD5) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.MD5);
@@ -143,8 +140,6 @@ public class ImageDataSecurityFragment extends Fragment implements View.OnClickL
                 break;
             case 2:
                 Toast.makeText(mContext, "Not possible only support for 128 bytes data.", Toast.LENGTH_LONG).show();
-//                KeyChain keyChain = (KeyChain) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.KEY_CHAIN);
-//                decryptedData = keyChain.decryptToBitmap(mContext, HomeActivity.KEY_CHAIN_KEY, mTvOutput.getText().toString());
                 return;
             case 3:
                 Toast.makeText(mContext, "Not Possible", Toast.LENGTH_LONG).show();

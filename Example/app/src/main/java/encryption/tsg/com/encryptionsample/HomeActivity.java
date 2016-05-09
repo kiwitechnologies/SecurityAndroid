@@ -14,7 +14,7 @@ public class HomeActivity extends AppCompatActivity {
     public final static String AES_KEY = "bbC2H19lkVbQDfakxcrtNMQdd0FloLyw";
     //    public final static String AES256JN_KEY = "V3z1gYur18m3lxS1PqAVf3z8sFoJpleW";
     public final static String AES256JN_KEY = "bbC2H19lkVbQDfakxcrtNMQdd0FloLyw";
-    public final static String KEY_CHAIN_KEY = "kEyLI1Fy648tzWXGuRcxrg==";
+    public final static String KEY_STORE_KEY = "kEyLI1Fy648tzWXGuRcxrg==";
 
 
     public Spinner mSpnrSecurityType;

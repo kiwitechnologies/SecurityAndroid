@@ -19,8 +19,8 @@ import security.tsg.com.tsgsecurityframwork.AES;
 import security.tsg.com.tsgsecurityframwork.AES256JNEncryption;
 import security.tsg.com.tsgsecurityframwork.DataSecurity;
 import security.tsg.com.tsgsecurityframwork.DataSecurityFactory;
+import security.tsg.com.tsgsecurityframwork.KeyStoreSecurity;
 import security.tsg.com.tsgsecurityframwork.MD5;
-import security.tsg.com.tsgsecurityframwork.KeyChain;
 
 
 /**
@@ -112,8 +112,8 @@ public class TextDataSecurityFragment extends Fragment implements View.OnClickLi
                 mTvOutput.setText(encryptedData);
                 break;
             case 2:
-                KeyChain keyChain = (KeyChain) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.KEY_CHAIN);
-                encryptedData = keyChain.encrypt(mContext, HomeActivity.KEY_CHAIN_KEY, mEdtInput.getText().toString());
+                KeyStoreSecurity keyStore = (KeyStoreSecurity) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.KEY_STORE);
+                encryptedData = keyStore.encrypt(mContext, HomeActivity.KEY_STORE_KEY, mEdtInput.getText().toString());
                 mTvOutput.setText(encryptedData);
                 break;
             case 3:
@@ -147,8 +147,8 @@ public class TextDataSecurityFragment extends Fragment implements View.OnClickLi
                 decryptedData = aes256JNEncryption.decryptToString(HomeActivity.AES256JN_KEY, mTvOutput.getText().toString());
                 break;
             case 2:
-                security.tsg.com.tsgsecurityframwork.KeyChain keyChain = (security.tsg.com.tsgsecurityframwork.KeyChain) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.KEY_CHAIN);
-                decryptedData = keyChain.decryptToString(mContext, HomeActivity.KEY_CHAIN_KEY, mTvOutput.getText().toString());
+                KeyStoreSecurity keyStoreSecurity = (KeyStoreSecurity) DataSecurityFactory.getAlgoUtility(DataSecurity.TYPE.KEY_STORE);
+                decryptedData = keyStoreSecurity.decryptToString(mContext, HomeActivity.KEY_STORE_KEY, mTvOutput.getText().toString());
                 break;
             case 3:
                 Toast.makeText(mContext, "MD5 hash can not be converted back to string", Toast.LENGTH_LONG).show();
